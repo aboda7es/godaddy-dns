@@ -1,34 +1,28 @@
 {
   "name": "godaddy-dns",
-  "version": "1.0.0",
-  "description": "A Node.js script to programmatically update GoDaddy DNS records",
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/lmammino/godaddy-dns.git"
-  },
-  "license" : {
-    "type" : "MIT",
-    "url" : "https://raw.githubusercontent.com/lmammino/godaddy-dns/master/LICENSE"
-  },
-  "bin" : {
-    "godaddy-dns" : "./godaddy-dns.js"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/xo index.js"
-  },
-  "author": {
-    "name" : "Luciano Mammino",
-    "email" : "lucianomammino@gmail.com",
-    "url" : "http://loige.co"
-  },
-  "engines" : {
-    "node" : ">=4.0.0"
-  },
+  "version": "1.1.0",
+  "description": "A Node.js script to programmatically update GoDaddy DNS records. Created by https://github.com/lmammino",
+  "main": "godaddy-dns.js",
   "dependencies": {
     "commander": "^2.9.0",
-    "request": "^2.72.0"
+    "request": "^2.75.0"
   },
-  "devDependencies": {
-    "xo": "^0.15.0"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "xo index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboda7es/godaddy-dns.git"
+  },
+  "keywords": [
+    "godaddy",
+    "dns"
+  ],
+  "author": "Abdulrahman Alballaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aboda7es/godaddy-dns/issues"
+  },
+  "homepage": "https://github.com/aboda7es/godaddy-dns#readme"
 }
