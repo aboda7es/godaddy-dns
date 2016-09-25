@@ -1,6 +1,6 @@
 # godaddy-dns
 
-A Node.js script to programmatically update GoDaddy DNS records
+A Node.js script to programmatically update GoDaddy DNS records. Created by [Luciano Mammino](http://loige.co).
 
 [![npm version](https://badge.fury.io/js/godaddy-dns.svg)](http://badge.fury.io/js/godaddy-dns)
 
@@ -25,51 +25,6 @@ godaddy-dns -c config.json
 This script requires **Node.js** (version >= 4.0.0) and a valid GoDaddy API **key**
 and **secret**. You can get register a new key on your [GoDaddy developer page](https://developer.godaddy.com/keys/)
 
-
-## Installation
-
-To install the script globally you can use NPM:
-
-```bash
-npm install --global godaddy-dns
-```
-
-*If you have the script already installed in your system, this command will
-update it to the latest available version.*
-
-After executing this command the script `godaddy-dns` will be globally available
-in your system. Give it a try with:
-
-```bash
-godaddy-dns -V
-```
-
-
-## Configuration
-
-The command needs a configuration file in order to be executed. The configuration
-file can be specified at runtime using the option `--config`, if not specfied the
-command will try to access the file `.godaddy-dns.json` in the home directory of
-the current user.
-
-The configuration file contains a JSON object with the following fields:
-
-  * **apiKey**: The API key for your GoDaddy account
-  * **secret**: The API key secret for your GoDaddy account
-  * **domain**: The domain for which to update the DNS records
-  * **records**: An array of objects that defines the records to update. Every
-  record object can define the following values:
-   * **name**: (mandatory) the name of the record (e.g. `"mysubdomain"`, `"@"` or `"*"`)
-   * **type**: (default `"A"`) the type of entry for the record
-   * **ttl**: (default `600`) the TTL of the record in seconds (min value is 600)
-
-You can define the DNS records in the **records** configuration also using a shorter
-syntax by just passing the **name** of the domain as a plain string (e.g. `"mysubdomain"`).
-If you have a single record wrapping it into an array is optional, you can
-simply pass it as a single string or object.
-
-See [config.json.sample](config.json.sample) for an example of how to structure
-your `config.json`.
 
 
 ## Last IP cache
@@ -112,11 +67,8 @@ Usage: godaddy-dns [options]
     -V, --version        output the version number
     -c, --config [file]  specify the configuration file to use  (default "<user home folder>/.godaddy-dns.json")
     -i, --ipfile [file]  specify which file to use to store the last found ip (default "<user temp folder>/.lastip")
+    -u, --update-mode    run the script in update mode (instead of adding a record, the program changes the record if it exists)
 ```
-
-## Bugs and improvements
-
-If you find a bug or have an idea about how to improve this script you can [open an issue](https://github.com/lmammino/godaddy-dnsissues) or [submit a pull request](https://github.com/lmammino/godaddy-dnspulls), it will definitely make you a better person! 😝
 
 
 ## License
