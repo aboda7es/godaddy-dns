@@ -152,6 +152,7 @@ getLastIp()
 .then((ip) => {
 	currentIp = ip;
 	if (lastIp === currentIp) {
+		console.log(`[${new Date()}] No IP address change. No request made`);
 		return Promise.reject()
 	}
 	if (program.updateMode) {
